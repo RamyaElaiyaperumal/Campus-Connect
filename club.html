@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect - Clubs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .club-card {
+      background: skyblue;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .club-card:hover {
+      transform: translateY(-5px);
+    }
+    .club-card h3 {
+      margin-top: 0;
+      color: #34495e;
+    }
+    .club-card p {
+      color: #555;
+    }
+    .btn {
+      background: seagreen;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #1a5276;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #333;
+      color: #fff;
+  </style>
+</head>
+<body>
+  <header>
+    <img src="club12.jpg" width="150">
+    <h1>Campus Connect - Clubs</h1>
+    <p>Explore and join the student clubs on campus!</p>
+  </header>
+  <center>
+
+  <div class="container">
+    <!-- Club 1 -->
+    <div class="club-card">
+      <h3>Drama Club</h3>
+      <p>Unleash your acting talent, participate in stage plays, and explore theatre arts.</p>
+       <a href="drama club.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Drama Club')">Join</button>
+    </div>
+
+    <!-- Club 2 -->
+    <div class="club-card">
+      <h3>Coding Club</h3>
+      <p>Enhance your coding skills, participate in hackathons, and build real projects.</p>
+       <a href="coding.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Coding Club')">Join</button>
+    </div>
+
+    <!-- Club 3 -->
+    <div class="club-card">
+      <h3>Music Club</h3>
+      <p>Share your love for music, perform at campus events, and collaborate with artists.</p>
+       <a href="music.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Music Club')">Join</button>
+    </div>
+    <!--club 4-->
+    <div class="club-card">
+      <h3>Dance Club</h3>
+      <p>Enjoy your life with dance, perform at campus events, and collaborate with artists
+      .</p>
+       <a href="dance club.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Dance Club')">Join</button>
+    </div>
+     <!--club 5-->
+    <div class="club-card">
+      <h3>Communication club</h3>
+      <p>Improve your communication skill, perform at campus events, and collaborate with artists
+      .</p>
+       <a href="communication.jpg" class="btn">View Gallery</a>
+      
+      <button class="btn" onclick="joinClub('Communication club')">Join</button>
+    </div>
+     <!--club 6-->
+    <div class="club-card">
+      <h3>Yoga club</h3>
+      <p>Stay with peaceful and mindfulness, perform at campus events, and collaborate with artists
+      .</p>
+       <a href="yoga.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Yoga Club')">Join</button>
+    </div>
+     <!--club 7-->
+    <div class="club-card">
+      <h3>Literature Club</h3>
+      <p>Participate in book reading, writing,book discussion, perform at campus events, and collaborate with artists
+      .</p>
+       <a href="literature.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Literature Club')">Join</button>
+    </div> 
+
+    <!-- Club 5 -->
+    <div class="club-card">
+      <h3>Sports Club</h3>
+      <p>Join sports teams, compete in tournaments, and promote fitness on campus.</p>
+       <a href="sports.jpg" class="btn">View Gallery</a>
+      <button class="btn" onclick="joinClub('Sports Club')">Join</button></center>
+    </div>
+  </div>
+
+  <script>
+    function joinClub(clubName) {
+      alert("You have requested to join " + clubName + "!");
+    }
+  </script>
+   <footer>
+        &copy; 2025 Campus Connect. All Rights Reserved.
+    </footer>
+</body>
+</html>

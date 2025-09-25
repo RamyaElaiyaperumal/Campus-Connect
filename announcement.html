@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements - Campus Connect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Background image */
+            background-image: url('background2.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Overlay for readability */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background-color:palevioletred;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .announcement {
+            background-color:powderblue;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .announcement:hover {
+            transform: scale(1.02);
+        }
+
+        .announcement h2 {
+            margin-top: 0;
+            color: #004aad;
+        }
+
+        .announcement p {
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.9em;
+            color:red;
+        }
+
+        footer {
+            background-color:palevioletred;
+            color:white ;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <header>
+        <h1>Campus Connect-Announcements</h1>
+    </header>
+
+    <div class="container">
+        <div class="announcement">
+            <h2>New Club Registration Open</h2>
+            <p class="date">Posted on: 21 September 2025</p>
+            <p>Students can now register their clubs for the upcoming semester. Visit the Clubs page for more details.</p>
+        </div>
+
+        <div class="announcement">
+            <h2>Guest Lecture: AI in 2025</h2>
+            <p class="date">Posted on: 19 September 2025</p>
+            <p>Join us for a guest lecture on Artificial Intelligence trends in 2025. Open for all students. Registration required.</p>
+        </div>
+
+        <div class="announcement">
+            <h2>Annual Sports Meet</h2>
+            <p class="date">Posted on: 15 September 2025</p>
+            <p>The Annual Sports Meet will be held on 5th October. Students are encouraged to participate and support their teams.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Campus Connect. All Rights Reserved.
+    </footer>
+</div>
+
+</body>
+</html>
