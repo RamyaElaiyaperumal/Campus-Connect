@@ -1,255 +1,128 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Connect</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
+    /* Basic styling (you can move this into style.css) */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
+    }
+
+    body {
       line-height: 1.6;
-      background-color: #f9f9f9;
+      background: #f9f9f9;
       color: #333;
     }
 
-    /* Header */
     header {
-      background: #2c3e50;
-      color: white;
-      padding: 15px 20px;
+      background: #4CAF50;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
+      background: #333;
     }
 
-    header h1 {
-      margin: 0;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin-left: 20px;
-    }
-
-    nav ul li a {
-      color: white;
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
       text-decoration: none;
-      font-weight: bold;
+      display: block;
     }
 
-    /* Hero Section */
+    nav a:hover {
+      background: #575757;
+    }
+
     .hero {
-      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') no-repeat center center/cover;
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background:url("background 1.jpg")no-repeat center center/cover;
       text-align: center;
-      color: white;
+      padding: 3rem 2rem;
+      background: #e8f5e9;
     }
 
-    .hero h2 {
-      font-size: 3rem;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px;
-      border-radius: 10px;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
-    /* About */
-    .about, .services {
-      padding: 40px 20px;
-      text-align: center;
+    .content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .about h2, .services h2 {
-      margin-bottom: 20px;
+    .content h2 {
+      margin-bottom: 1rem;
+      color: #4CAF50;
     }
 
-    /* Services */
-    .services .cards {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    /* Footer */
     footer {
-      background: #2c3e50;
-      color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      padding: 1rem;
+      margin-top: 2rem;
+      background:#4CAF50;
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>Campus Connect</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <tent: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 350px;
-      animation: fadeIn 1s ease-in-out;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #264653;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1em;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #2a9d8f;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #21867a;
-    }
-    .toggle {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 0.9em;
-    }
-    .toggle a {
-      color: #2a9d8f;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .toggle a:hover {
-      text-decoration: underline;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-  </style>
-</head>
-<body>
-  <div class="container" id="form-container">
-    <h2 id="form-title">Login</h2>
-    <form id="auth-form">
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <div class="toggle">
-      <p>Don't have an account? <a href="#" onclick="toggleForm()">Register</a></p>
-    </div>
-  </div>
-
-  <script>
-    const formContainer = document.getElementById("form-container");
-    const formTitle = document.getElementById("form-title");
-    const authForm = document.getElementById("auth-form");
-
-    function toggleForm() {
-      if (formTitle.textContent === "Login") {
-        formTitle.textContent = "Register";
-        authForm.innerHTML = `
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email" required>
-          <input type="password" placeholder="Password" required>
-          <input type="password" placeholder="Confirm Password" required>
-          <button type="submit">Register</button>
-        `;
-        document.querySelector(".toggle p").innerHTML = 
-          'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
-      } else {
-        formTitle.textContent = "Login";
-        authForm.innerHTML = `
-          <input type="email" placeholder="Email" required>
-          <input type="password" placeholder="Password" required>
-          <button type="submit">Login</button>
-        `;
-        document.querySelector(".toggle p").innerHTML = 
-          'Don\'t have an account? <a href="#" onclick="toggleForm()">Register</a>';
-      }
-    }
-  </script>
-</body>
-</html>
-
-        <li><a href="#">About</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Clubs</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <img src="logo.jpg" width="150">
+    <h1> Welcome to Campus Connect</h1>
+    <br></br>
+    <p><h3>Itx Ram!!!</h3><br></br>
+    <h3>phone no.:8925754276</h3></p>
+   
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Welcome to Campus Connect</h2>
-  </section>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="event.html">Events</a>
+    <a href="club.html">Clubs</a>
+    <a href="announcement.html">Announcemnts</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <!-- About -->
-  <section class="about">
-    <h2>About Us</h2>
-    <p>Campus Connect is your one-stop platform to stay updated with college events, clubs, and announcements. Connect, collaborate, and grow with your campus community.</p>
-  </section>
+  <!-- Content Section -->
+  <section class="content">
+    <h2><center><b>⚡⚡About Us⚡⚡</b></center></h2>
+    <p><h3><ul>Campus Connect is a platform that bridges students, faculty, and campus activities in one place.<br></br>
+It helps share events, announcements, resources, and collaboration opportunities within the campus community.</ul></h3>
+    </p><br></br>
+    ****
 
-  <!-- Services / Highlights -->
-  <section class="services">
-    <h2>What We Offer</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Events</h3>
-        <p>Stay informed about cultural fests, seminars, and workshops.</p>
-      </div>
-      <div class="card">
-        <h3>Clubs</h3>
-        <p>Join different student clubs and connect with like-minded peers.</p>
-      </div>
-      <div class="card">
-        <h3>Announcements</h3>
-        <p>Get the latest updates, notices, and important news instantly.</p>
-      </div>
-    </div>
+    <h2><center><b>⚡⚡What we offer⚡⚡</b></center></h2>
+    <h2><--Event--></h2>
+    <p><h3>An event is a planned gathering or activity organized for a specific purpose, such as learning, celebration, or networking.<br></br>
+It brings people together to share experiences, exchange ideas, and create memorable moments.</h3>
+     
+    </p><br></br>
+    
+    <h2><--Clubs--></h2>
+    <p><h3>Clubs bring students together to explore shared interests, develop skills, and build community on campus.<br></br>
+They offer opportunities for learning, leadership, and fun beyond the classroom.</h3></p><br></br>
+<h2><--Announcement--></h2>
+<p><h3>Announcements keep students updated with the latest campus news, events, and opportunities.<br></br>
+They serve as a quick source of important information for the entire campus community.</h3></p><br></br>
+****
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Campus Connect | All Rights Reserved</p>
+    <p>&copy; 2025 Campus Connect. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
